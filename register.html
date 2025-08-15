@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register for selenaCAT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gradient">
+  <div class="login-container">
+    <form id="registerForm">
+      <h2>Start your 7‑day trial</h2>
+      <label>
+        First Name
+        <input type="text" name="first" required>
+      </label>
+      <label>
+        Last Name
+        <input type="text" name="last" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" required>
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" required>
+      </label>
+      <button type="submit">Register</button>
+      <button type="button" id="googleRegister" class="google-btn">Sign up with Google</button>
+    </form>
+  </div>
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Trial started! Redirecting to dashboard...');
+      window.location.href = 'dashboard.html';
+    });
+    document.getElementById('googleRegister').addEventListener('click', function() {
+      alert('Google sign-up is a placeholder.');
+    });
+  </script>
+</body>
+</html>
